@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Fitness - El Ancho de Espada</title>
+  <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+        <h1 class="logo">El Ancho de Espada</h1>
+        <ul class="menu">
+          <li class="menu-item"><a href="index.html">Inicio</a></li>
+          
+          <li class="menu-item">
+            <a href="clases.html">Clases</a>
+            <div class="mega-menu">
+              <a href="clases.html">Musculación</a>
+              <a href="clases.html">CrossFit</a>
+              <a href="clases.html">Yoga</a>
+              <a href="clases.html">Spinning</a>
+            </div>
+          </li>
+          
+          <li class="menu-item">
+            <a href="profesores.html">Entrenadores</a>
+          </li>
+          
+          <li class="menu-item">
+            <a href="precio.html">Precios</a>
+            <div class="mega-menu">
+              <a href="precio.html">Plan Mensual</a>
+              <a href="precio.html">Plan Anual</a>
+            </div>
+          </li>
+          <li class="menu-item"><a href="contacto.html">Contacto</a></li>
+          <li class="menu-item"><a href="blog.html">Blog</a></li>
+        </ul>
+      </nav>
+  </header>
+
+  <main class="blog">
+    <h2 class="titulo-blog">Blog de Fitness</h2>
+
+    <!-- Filtros por categoría -->
+    <div class="filtros-blog">
+      <input type="radio" name="categoria" id="todos" checked>
+      <label for="todos">Todos</label>
+      <input type="radio" name="categoria" id="entrenamiento">
+      <label for="entrenamiento">Entrenamiento</label>
+      <input type="radio" name="categoria" id="nutricion">
+      <label for="nutricion">Nutrición</label>
+      <input type="radio" name="categoria" id="bienestar">
+      <label for="bienestar">Bienestar</label>
+    </div>
+
+    <!-- Artículos estilo periódico -->
+    <section class="articulos">
+      <article class="nota entrenamiento scroll-reveal">
+        <h3>Rutinas para Ganar Masa Muscular</h3>
+        <p>Te mostramos una guía completa para entrenar de manera efectiva y segura en el gimnasio.</p>
+        <span class="tag">Entrenamiento</span>
+      </article>
+
+      <article class="nota nutricion scroll-reveal">
+        <h3>Alimentos Clave para el Rendimiento</h3>
+        <p>Descubrí qué comer antes y después de entrenar para maximizar resultados.</p>
+        <span class="tag">Nutrición</span>
+      </article>
+
+      <article class="nota bienestar scroll-reveal">
+        <h3>Cómo Dormir Mejor y Recuperarte Más Rápido</h3>
+        <p>El descanso es tan importante como el entrenamiento. Tips para lograrlo.</p>
+        <span class="tag">Bienestar</span>
+      </article>
+
+      <article class="nota entrenamiento scroll-reveal">
+        <h3>HIIT: Entrenamiento a Alta Intensidad</h3>
+        <p>Quemás calorías en menos tiempo. Ideal para quienes tienen poco tiempo.</p>
+        <span class="tag">Entrenamiento</span>
+      </article>
+    </section>
+
+    <!-- Sección de comentarios -->
+    <section class="comentarios">
+      <h3>Comentarios recientes</h3>
+      <div class="comentario">
+        <div class="avatar"></div>
+        <div class="contenido">
+          <strong>Marcos R.</strong>
+          <p>Me encantó el artículo sobre el HIIT, lo estoy aplicando y ya veo resultados.</p>
+        </div>
+      </div>
+      <div class="comentario">
+        <div class="avatar"></div>
+        <div class="contenido">
+          <strong>Vanesa T.</strong>
+          <p>Muy buenos tips sobre nutrición. Gracias por compartir contenido útil.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="newsletter">
+      <h3>Suscribite a nuestro Newsletter</h3>
+      <form>
+        <input type="email" placeholder="Tu correo electrónico" required>
+        <button type="submit">Suscribirme</button>
+      </form>
+    </div>
+    <div class="social">
+      <a href="https://www.facebook.com/"><img src="images/facebook.webp" alt="Facebook"></a>
+      <a href="https://wa.me"><img src="images/whatsapp.webp" alt="WhatsApp"></a>
+      <a href="https://www.instagram.com/"><img src="images/instagram.png" alt="Instagram"></a>
+    </div>
+    <div class="mapa">
+      <iframe src="https://www.google.com/maps/embed?..." width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </footer>
+
+  <script>
+    const articulos = document.querySelectorAll('.nota');
+    const radios = document.querySelectorAll('input[name="categoria"]');
+
+    radios.forEach(radio => {
+      radio.addEventListener('change', () => {
+        const filtro = radio.id;
+        articulos.forEach(articulo => {
+          if (filtro === 'todos' || articulo.classList.contains(filtro)) {
+            articulo.style.display = 'block';
+          } else {
+            articulo.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Scroll Reveal
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.2
+    });
+
+    document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

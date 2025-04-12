@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto - El Ancho de Espada</title>
+  <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+        <h1 class="logo">El Ancho de Espada</h1>
+        <ul class="menu">
+          <li class="menu-item"><a href="index.html">Inicio</a></li>
+          
+          <li class="menu-item">
+            <a href="clases.html">Clases</a>
+            <div class="mega-menu">
+              <a href="clases.html">Musculación</a>
+              <a href="clases.html">CrossFit</a>
+              <a href="clases.html">Yoga</a>
+              <a href="clases.html">Spinning</a>
+            </div>
+          </li>
+          
+          <li class="menu-item">
+            <a href="profesores.html">Entrenadores</a>
+          </li>
+          
+          <li class="menu-item">
+            <a href="precio.html">Precios</a>
+            <div class="mega-menu">
+              <a href="precio.html">Plan Mensual</a>
+              <a href="precio.html">Plan Anual</a>
+            </div>
+          </li>
+          <li class="menu-item"><a href="contacto.html">Contacto</a></li>
+          <li class="menu-item"><a href="blog.html">Blog</a></li>
+        </ul>
+      </nav>
+  </header>
+
+  <main class="formulario-contacto">
+    <h2>Contacto</h2>
+    <form id="contactForm">
+      <div class="grid-form">
+        <div class="campo">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" required>
+        </div>
+        <div class="campo">
+          <label for="apellido">Apellido</label>
+          <input type="text" id="apellido" name="apellido" required>
+        </div>
+        <div class="campo">
+          <label for="telefono">Teléfono</label>
+          <input type="tel" id="telefono" name="telefono" pattern="[0-9]{10}" required>
+        </div>
+        <div class="campo">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="campo area">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" required></textarea>
+        </div>
+      </div>
+
+      <button type="submit" id="enviarBtn">Enviar</button>
+      <div id="spinner" class="spinner oculto"></div>
+    </form>
+  </main>
+
+  <!-- Modal de confirmación -->
+  <div id="modal" class="modal oculto">
+    <div class="modal-contenido">
+      <h3>Mensaje enviado</h3>
+      <p>¡Gracias por contactarte con nosotros!</p>
+      <button onclick="cerrarModal()">Cerrar</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="newsletter">
+      <h3>Suscribite a nuestro Newsletter</h3>
+      <form>
+        <input type="email" placeholder="Tu correo electrónico" required>
+        <button type="submit">Suscribirme</button>
+      </form>
+    </div>
+    <div class="social">
+      <a href="https://www.facebook.com/"><img src="images/facebook.webp" alt="Facebook"></a>
+      <a href="https://wa.me"><img src="images/whatsapp.webp" alt="WhatsApp"></a>
+      <a href="https://www.instagram.com/"><img src="images/instagram.png" alt="Instagram"></a>
+    </div>
+    <div class="mapa">
+      <iframe src="https://www.google.com/maps/embed?..." width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </footer>
+
+  <script>
+    const form = document.getElementById("contactForm");
+    const spinner = document.getElementById("spinner");
+    const modal = document.getElementById("modal");
+  
+    // Siempre ocultar el modal al cargar la página
+    window.addEventListener("load", () => {
+      modal.classList.add("oculto");
+      spinner.classList.add("oculto");
+    });
+  
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      spinner.classList.remove("oculto");
+  
+      setTimeout(() => {
+        spinner.classList.add("oculto");
+        modal.classList.remove("oculto");
+        form.reset();
+      }, 2000);
+    });
+  
+    function cerrarModal() {
+      modal.classList.add("oculto");
+    }
+  </script>  
+</body>
+</html>

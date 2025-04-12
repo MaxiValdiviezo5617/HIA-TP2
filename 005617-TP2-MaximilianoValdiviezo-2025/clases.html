@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clases - El Ancho de Espada</title>
+  <link rel="stylesheet" href="CSS/styles.css" />
+</head>
+<body>
+
+    <header> 
+      <nav class="navbar">
+        <h1 class="logo">El Ancho de Espada</h1>
+        <ul class="menu">
+          <li class="menu-item"><a href="index.html">Inicio</a></li>
+          
+          <li class="menu-item">
+            <a href="clases.html">Clases</a>
+            <div class="mega-menu">
+              <a href="clases.html">Musculación</a>
+              <a href="clases.html">CrossFit</a>
+              <a href="clases.html">Yoga</a>
+              <a href="clases.html">Spinning</a>
+            </div>
+          </li>
+          
+          <li class="menu-item">
+            <a href="profesores.html">Entrenadores</a>
+          </li>
+          
+          <li class="menu-item">
+            <a href="precio.html">Precios</a>
+            <div class="mega-menu">
+              <a href="precio.html">Plan Mensual</a>
+              <a href="precio.html">Plan Anual</a>
+            </div>
+          </li>
+          <li class="menu-item"><a href="contacto.html">Contacto</a></li>
+          <li class="menu-item"><a href="blog.html">Blog</a></li>
+        </ul>
+      </nav>
+      </header>
+      
+
+  <div class="contenedor-filtro-galeria">
+
+    <!-- Filtros -->
+    <div class="filtros">
+      <input type="radio" name="filtro" id="todos" checked>
+      <label for="todos">Todos</label>
+  
+      <input type="radio" name="filtro" id="musculacion">
+      <label for="musculacion">Musculación</label>
+  
+      <input type="radio" name="filtro" id="crossfit">
+      <label for="crossfit">CrossFit</label>
+  
+      <input type="radio" name="filtro" id="yoga">
+      <label for="yoga">Yoga</label>
+  
+      <input type="radio" name="filtro" id="spinning">
+      <label for="spinning">Spinning</label>
+    </div>
+  
+    <!-- Galería -->
+    <section class="galeria">
+      <!-- MUSCULACIÓN -->
+      <div class="tarjeta musculacion">
+        <img src="images/muscu1.jpg" alt="Musculación 1">
+        <div class="overlay">
+          <h3>Musculación</h3>
+          <p>Rutinas para fuerza y volumen.</p>
+          <p>Trabajá con pesas, bancos y poleas para lograr un desarrollo muscular equilibrado y seguro.</p>
+        </div>
+      </div>
+      
+      <div class="tarjeta musculacion">
+        <img src="images/muscu2.jpg" alt="Musculación 2">
+        <div class="overlay">
+          <h3>Musculación</h3>
+          <p>Entrenamiento con peso libre.</p>
+          <p>Clases guiadas para mejorar tu técnica, aumentar la carga progresivamente y prevenir lesiones.</p>
+        </div>
+      </div>
+      
+  
+      <!-- CROSSFIT -->
+      <div class="tarjeta crossfit">
+        <img src="images/cross1.jpg" alt="CrossFit 1">
+        <div class="overlay">
+          <h3>CrossFit</h3>
+          <p>Alta intensidad funcional.</p>
+          <p>Combiná fuerza, cardio y agilidad en sesiones explosivas que desafían todo tu cuerpo.</p>
+        </div>
+      </div>
+      
+      <div class="tarjeta crossfit">
+        <img src="images/cross2.jpg" alt="CrossFit 2">
+        <div class="overlay">
+          <h3>CrossFit</h3>
+          <p>Desafíos diarios grupales.</p>
+          <p>Entrenamientos variados cada día (WOD) con motivación grupal y enfoque en técnica y resistencia.</p>
+        </div>
+      </div>
+      
+  
+      <!-- YOGA -->
+      <div class="tarjeta spinning">
+        <img src="images/spin1.jpg" alt="Spinning 1">
+        <div class="overlay">
+          <h3>Spinning</h3>
+          <p>Cardio con ritmo intenso.</p>
+          <p>Pedaleá al ritmo de la música en clases energéticas que queman calorías y fortalecen tus piernas.</p>
+        </div>
+      </div>
+      
+      <div class="tarjeta spinning">
+        <img src="images/spin2.jpg" alt="Spinning 2">
+        <div class="overlay">
+          <h3>Spinning</h3>
+          <p>Bicicleta y motivación.</p>
+          <p>Clases dirigidas por entrenadores que te impulsan a superar tus límites en cada sesión.</p>
+        </div>
+      </div>
+            
+      <!-- SPINNING -->
+      <div class="tarjeta yoga">
+        <img src="images/yoga1.jpg" alt="Yoga 1">
+        <div class="overlay">
+          <h3>Yoga</h3>
+          <p>Posturas para el equilibrio.</p>
+          <p>Mejorá tu flexibilidad, respiración y control mental con sesiones centradas en el bienestar integral.</p>
+        </div>
+      </div>
+      
+      <div class="tarjeta yoga">
+        <img src="images/yoga2.jpg" alt="Yoga 2">
+        <div class="overlay">
+          <h3>Yoga</h3>
+          <p>Relajación guiada.</p>
+          <p>Clases suaves y meditativas que ayudan a reducir el estrés, mejorar el sueño y recuperar energía.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+  <!-- Tabla de horarios -->
+  <section class="tabla-horarios">
+    <h2>Horarios Semanales</h2>
+    <div class="tabla-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>Clase</th>
+            <th>Lunes</th>
+            <th>Martes</th>
+            <th>Miércoles</th>
+            <th>Jueves</th>
+            <th>Viernes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Musculación</td>
+            <td>08:00</td>
+            <td>08:00</td>
+            <td>08:00</td>
+            <td>08:00</td>
+            <td>08:00</td>
+          </tr>
+          <tr>
+            <td>CrossFit</td>
+            <td>10:00</td>
+            <td>11:00</td>
+            <td>10:00</td>
+            <td>11:00</td>
+            <td>10:00</td>
+          </tr>
+          <tr>
+            <td>Yoga</td>
+            <td>15:00</td>
+            <td>16:00</td>
+            <td>15:00</td>
+            <td>16:00</td>
+            <td>15:00</td>
+          </tr>
+          <tr>
+            <td>Spinning</td>
+            <td>18:00</td>
+            <td>19:00</td>
+            <td>18:00</td>
+            <td>19:00</td>
+            <td>18:00</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+<br>    <br>  
+  <footer>
+    <div class="newsletter">
+      <h3>Suscribite a nuestro Newsletter</h3>
+      <form>
+        <input type="email" placeholder="Tu correo electrónico" required>
+        <button type="submit">Suscribirme</button>
+      </form>
+    </div>
+    <div class="social">
+      <a href="https://www.facebook.com/"><img src="images/facebook.webp" alt="Facebook"></a>
+      <a href="https://wa.me"><img src="images/whatsapp.webp" alt="WhatsApp"></a>
+      <a href="https://www.instagram.com/"><img src="images/instagram.png" alt="Instagram"></a>
+    </div>
+    <div class="mapa">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.999016280441!2d2.294481315674037!3d48.85837007928706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fc7a36c6e1d%3A0xc809abb12e997edf!2sTorre%20Eiffel!5e0!3m2!1ses!2sar!4v1616571451646!5m2!1ses!2sar"
+        width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </footer>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const filtros = document.querySelectorAll('.filtros input[name="filtro"]');
+      const tarjetas = document.querySelectorAll('.tarjeta');
+    
+      function aplicarFiltro(categoria) {
+        tarjetas.forEach(tarjeta => {
+          if (categoria === "todos" || tarjeta.classList.contains(categoria)) {
+            tarjeta.style.display = "block";
+          } else {
+            tarjeta.style.display = "none";
+          }
+        });
+      }
+    
+      // Al cambiar el filtro manualmente
+      filtros.forEach(filtro => {
+        filtro.addEventListener('change', () => {
+          aplicarFiltro(filtro.id);
+        });
+      });
+    
+      // Al entrar con un #hash desde el menú
+      const hash = window.location.hash.replace("#", "");
+      if (hash) {
+        const filtroRadio = document.getElementById(hash);
+        if (filtroRadio) {
+          filtroRadio.checked = true;
+          aplicarFiltro(hash);
+          document.querySelector(".galeria")?.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    });
+    </script>
+    
+
+</body>
+</html>
